@@ -1,8 +1,21 @@
-# chuck_norries_jokes
+# Chuck Norris jokes
 
-A new Flutter project.
+It's an application that connected to [API](https://chucknorris.io). It show's random Chuck Norris jokes. To display jokes just click **Jokes** button.
 
-## Getting Started
+
+# Home Page
+
+<img alt="alt-text" height="350" src="./assets/home_screen.jpg" title="home screen" width="200"/>
+
+Home page consists of **about** section and **Jokes** button.
+
+
+# Jokes Page
+
+<img alt="alt-text" height="350" src="./assets/joke_screen.jpg" title="home screen" width="200"/>
+
+Joke page consists of **Joke** section and three buttons (**home**, **previous**, **next**)
+ 
 
 This project is a starting point for a Flutter application.
 
