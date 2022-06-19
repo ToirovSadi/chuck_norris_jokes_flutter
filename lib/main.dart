@@ -1,23 +1,29 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(const MyApp());
+import './screens/home_screen.dart';
+import './screens/categories_screen.dart';
+import './screens/joke_view_screen.dart';
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MyApp());
 }
 
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Chuck Norris Jokes',
-      // darkTheme: ThemeData.dark(),
-      home: Text('Hi!'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/categories': (context) => const CategoriesScreen(),
+        '/joke_view': (context) => const JokeViewScreen(),
+      },
     );
   }
 }
